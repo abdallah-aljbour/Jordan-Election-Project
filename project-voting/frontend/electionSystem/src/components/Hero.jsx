@@ -44,7 +44,7 @@ const Hero = () => {
         <p className="mt-2 text-xl text-white md:text-base"></p>
         <div className="mt-6">
           <Link to="/components/votingPages/categories">
-            <button className="px-5 py-3 text-sm text-center text-black bg-cyan-200 shadow-xl rounded-xl hover:text-white hover:shadow-xl ">
+            <button className="px-5 py-3 text-sm text-center text-white  shadow-xl rounded-xl hover:text-white hover:shadow-xl border-2 border-white">
               صوت الآن
             </button>
           </Link>

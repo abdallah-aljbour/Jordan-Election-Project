@@ -39,7 +39,7 @@ function Counter() {
         باقي على إنتهاء الأنتخابات
       </h2>
 
-      <div className="grid grid-flow-col gap-5 text-center auto-cols-max items-center justify-center w-fit mx-auto rounded-2xl bg-cyan-200">
+      <div className="grid grid-flow-col gap-5 text-center auto-cols-max items-center justify-center w-fit mx-auto rounded-2xl bg-black">
         <div className="flex flex-col p-2 bg-transparent rounded-box   text-white">
           <span className="countdown font-mono text-5xl">
             <span style={{ "--value": days }}></span>
