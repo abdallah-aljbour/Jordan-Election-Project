@@ -1,0 +1,42 @@
+.animated-border {
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, red 0%, transparent 0%) 2 / 4px;
+  transition: border-image 0.2s linear;
+}
+
+//* VotingPercentage.css */
+
+.card {
+  border: 4px solid transparent; /* Increased border size to 4px */
+  border-radius: 10px;
+  border-image: linear-gradient(to bottom, red, black, green) 1;
+  border-image-slice: 1;
+}
+
+.animated-border {
+  transition: border-image 1s ease-in-out;
+}
+
+.card-title {
+  transition: color 1s ease-in-out;
+}
+
+.radial-progress {
+  --size: 100px;
+  --thickness: 10px;
+  --value: 0;
+  position: relative;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--progress-color) var(--value),
+    transparent var(--value)
+  );
+  color: var(--progress-color);
+  font-size: calc(var(--size) / 3);
+  line-height: var(--size);
+  text-align: center;
+}
