@@ -4,13 +4,13 @@ require("dotenv").config();
 
 const apiKey = "682pm9spe7t3";
 const secret =
-  "474c88amtu4henae55hn3aunaxwpvwks7etzdryfqw7c9xd63uac3uq6nqy3jx7h";
+  "6b3a55e0261b034c70e5b16d8a572550e05c8c209e3a3c25d5a5db75d2bb2b4";
 console.log(secret);
 const client = new StreamClient(apiKey, secret);
 
 const createUserToken = async (req, res, next) => {
   const userID = req.user.id;
-  const name = "basil";
+  const name = req.user.name;
   const { dateOfDebate, secondDebatorID, secondDebatorName } = req.body;
   const user = {
     id: userID,
@@ -22,21 +22,18 @@ const createUserToken = async (req, res, next) => {
     role: "admin",
     name: secondDebatorName,
   };
-  console.log(dateOfDebate);
-  const exp = dayjs(dateOfDebate).unix();
+  const date = new Date(dateOfDebate);
+  const exp = Math.floor(date.getTime() / 1000);
   const iat = dayjs().unix();
-  console.log(user);
   await client.upsertUsers({
     users: { [user.id]: user, [secondUser.id]: secondUser },
   });
-  console.log("asd");
   const makerToken = client.createCallToken(
     { user_id: user.id, role: "admin" },
     [],
     exp,
     iat
   );
-
   const secondDebator = client.createCallToken(
     { user_id: secondDebatorID, role: "admin" },
     [],

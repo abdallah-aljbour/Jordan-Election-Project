@@ -51,6 +51,7 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 import Debates from "./pages/Debates";
+import DebateForm from "./pages/debatePages/FormDialog";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
       <Router>
         <div>
           <Routes>
+            <Route path="/DebateForm" element={<DebateForm />} />
             <Route path="/" element={<Home />} />
             <Route path="/nationalidform" element={<NationalIdForm />} />
             {/* <Route path="/NationalIdForm" element={<NationalIdForm />} /> */}
