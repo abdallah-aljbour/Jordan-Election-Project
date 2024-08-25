@@ -56,10 +56,4 @@ As part of our mission to increase voter awareness and promote transparency, we 
 - *Figma*: https://www.figma.com/design/VLyHMryUkjNllnWTmQhYCA/Untitled?node-id=0-1&t=4NJAxW8Gb9JA37eN-0
 - *GitHub*: https://github.com/Election-Website-for-Jordanians/project-vote
 
-# Team Members
-## [Abdallah Mahmoud Raja' Aljbour] - scrum master
-## [Ata Ashraf Ata Alshayeb] - product owner
-## [Sondos Saleh Musa Abedalkadeer] - quality assurance
-## [Basil Ramzi Nazieh Abushehab] - developer
-## [Duaa Tariq Ibrahim Khamis] - developer
-## [Mohammad Othman Ayed Sharab] - developer
+
